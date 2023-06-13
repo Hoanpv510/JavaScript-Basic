@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Const-Variables</title>
+</head>
+
+<body>
+    <h1>JavaScript Const</h1>
+    <p>The const keyword was introduced in ES6 (2015).</p>
+    <p>Variables defined with const cannot be Redeclared.</p>
+    <p>Variables defined with const cannot be Reassigned.</p>
+    <p>Variables defined with const have Block Scope.</p>
+    <p id="demo"></p>
+    <script>
+        //Same let
+        //but Variables defined with const cannot be Reassigned.
+        try {
+            const PI = Math.PI;
+            PI = 3.14;
+        } catch (error) {
+            document.getElementById("demo").innerHTML = error;
+        }
+    </script>
+</body>
+
+</html>

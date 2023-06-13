@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let-variables</title>
+</head>
+
+<body>
+    <h1>JavaScript Let</h1>
+
+    <p>The let keyword was introduced in ES6 (2015).</p>
+    <p>Variables defined with let can not be redeclared.</p>
+    <p>Variables defined with let must be declared before use.</p>
+    <p>Variables defined with let have block scope.</p>
+
+    <script>
+        let x = " JAV A Japan";
+        // Can not declare
+        // let x="JAV A China";
+
+        function scopeLet() {
+            let y = ["JAV A USA", " "];
+        }
+        // can not use outside Block
+        y[1] = "JAV A xxx";
+        console.log(y)
+        // y is not defined
+
+        // Can declare x in another scope
+        function scopeX() {
+            x = "JAV A Rusia";
+            return x;
+        }
+        console.log(x);
+        console.log(scopeX())
+    </script>
+</body>
+
+</html>
