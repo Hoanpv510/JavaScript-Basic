@@ -16,3 +16,9 @@ in my web page:
 
 document.getElementById("myH").innerHTML = "My First Page";
 document.getElementById("myP").innerHTML = "My first paragraph.";
+class NguSiDandon{
+    constructor(fName,lName){
+        this.fName =fName;
+        this.lName = lName;
+    }
+}
