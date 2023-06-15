@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript Iterables</h2>
+    <p>Iterating Over a String</p>
+    <p>Iterating Over an Array</p>
+    <p>Iterating Over a Set</p>
+    <p>Iterating Over a Map</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      // Create a Map
+      const fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["AAAA", 300],
+        ["BBBB", 300],
+        ["CCCC", 300],
+        ["CCCC", 300],
+        ["bananas", 300],
+        ["oranges", 200],
+      ]);
+
+      // List all entries
+      let text = "";
+      for (const x of fruits) {
+        text += x + "<br>";
+      }
+
+      document.getElementById("demo").innerHTML = text;
+
+      // Create a Set
+      const letters = new Set(["a", "b", "c", "d", "e"]);
+
+      // List all Elements
+      let text1 = "";
+      for (const x of letters) {
+        text1 += x + "<br>";
+      }
+
+      document.getElementById("demo").innerHTML = text1;
+    </script>
+  </body>
+</html>

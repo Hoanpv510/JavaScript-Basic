@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if-else</title>
+  </head>
+  <body>
+    <h1>JavaScript if, else, and else if</h1>
+    <p id="demo"></p>
+    <script>
+      let a = 10;
+      if (a > 0) {
+        document.write("A lon hon 0");
+      } else {
+        document.write("A nho hon 0");
+      }
+      //else if
+      function checkIf() {
+        const a = "abc chicken dinner";
+        if (a instanceof String) {
+          console.log("a la mot chuoi");
+        } else if (a === Number) {
+          console.log("a la kieu so");
+        } else {
+          console.log("a is not string or number");
+        }
+        console.log(typeof a);
+      }
+      console.log(a);
+    </script>
+  </body>
+</html>
