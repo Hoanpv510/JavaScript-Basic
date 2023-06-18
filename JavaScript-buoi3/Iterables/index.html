@@ -16,35 +16,44 @@
     <p id="demo1"></p>
     <script>
       // Create a Map
-      const fruits = new Map([
-        ["apples", 500],
-        ["bananas", 300],
-        ["AAAA", 300],
-        ["BBBB", 300],
-        ["CCCC", 300],
-        ["CCCC", 300],
-        ["bananas", 300],
-        ["oranges", 200],
-      ]);
+      //   const fruits = new Map([
+      //     ["apples", 500],
+      //     ["bananas", 300],
+      //     ["AAAA", 300],
+      //     ["BBBB", 300],
+      //     ["CCCC", 300],
+      //     ["CCCC", 300],
+      //     ["bananas", 300],
+      //     ["oranges", 200],
+      //   ]);
 
-      // List all entries
-      let text = "";
-      for (const x of fruits) {
-        text += x + "<br>";
+      //   // List all entries
+      //   let text = "";
+      //   for (const x of fruits) {
+      //     text += x + "<br>";
+      //   }
+
+      //   document.getElementById("demo").innerHTML = text;
+
+      //   // Create a Set
+      //   const letters = new Set(["a", "b", "c", "d", "e"]);
+
+      //   // List all Elements
+      //   let text1 = "";
+      //   for (const x of letters) {
+      //     text1 += x + "<br>";
+      //   }
+
+      //   document.getElementById("demo").innerHTML = text1;
+
+      //try catch
+      try {
+        let a = 5;
+        let b = 0;
+        console.log(a / b);
+      } catch (error) {
+        alert("Toi dai dot");
       }
-
-      document.getElementById("demo").innerHTML = text;
-
-      // Create a Set
-      const letters = new Set(["a", "b", "c", "d", "e"]);
-
-      // List all Elements
-      let text1 = "";
-      for (const x of letters) {
-        text1 += x + "<br>";
-      }
-
-      document.getElementById("demo").innerHTML = text1;
     </script>
   </body>
 </html>

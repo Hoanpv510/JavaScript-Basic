@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="id01">Old Heading</h1>
+    <p>JavaScript changed "Old Heading" to "New Heading".</p>
+    <h2>JavaScript HTML DOM</h2>
+    <img id="image" src="smiley.gif" width="160" height="120" />
+
+    <p>
+      The original image was smiley.gif, but the script changed it to
+      landscape.jpg
+    </p>
+    <p id="demo"></p>
+    <script>
+      const element = document.getElementById("id01");
+      element.innerHTML = "New Heading";
+
+      document.getElementById("image").src =
+        "https://www.w3schools.com/js/landscape.jpg";
+      document.getElementById("image").style = "width:300px;height:200px";
+
+      document.getElementById("demo").innerHTML = "Date : " + Date();
+    </script>
+  </body>
+</html>
