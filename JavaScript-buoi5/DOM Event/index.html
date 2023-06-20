@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript HTML Events</h2>
+    <h2 onclick="this.innerHTML='Ooops!'">Click on this text!</h2>
+
+    <h3 onclick="changeText(this)">JavaScript HTML Events</h3>
+    <h3>Click on this text!</h3>
+
+    <!-- <p>Click the button to display the date.</p>
+    Enter your name: <input type="text" id="fname" onchange="upperCase()" /> -->
+    <button onclick="displayDate()">The time is?</button>
+
+    <div
+      onmouseover="mOver(this)"
+      onmouseout="mOut(this)"
+      style="
+        background-color: #d94a38;
+        width: 120px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Mouse Over Me
+    </div>
+
+    <div
+      onmousedown="mDown(this)"
+      onmouseup="mUp(this)"
+      style="
+        background-color: #d94a38;
+        width: 90px;
+        height: 20px;
+        padding: 40px;
+      "
+    >
+      Click Me
+    </div>
+
+    <script>
+      function changeText(id) {
+        id.innerHTML = "Ooops!";
+      }
+
+      document.getElementById("myBtn").onclick = displayDate;
+
+      function checkCookies() {
+        var text = "";
+        if (navigator.cookieEnabled == true) {
+          text = "Cookies are enabled.";
+        } else {
+          text = "Cookies are not enabled.";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+      function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+      }
+
+      //   function upperCase() {
+      //     const x = document.getElementById("fname");
+      //     x.value = x.value.toUpperCase();
+      //   }
+
+      ///Hover
+
+      function mOver(obj) {
+        obj.innerHTML = "Thank You";
+      }
+
+      function mOut(obj) {
+        obj.innerHTML = "Mouse Over Me";
+      }
+      //Click
+      function mDown(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHTML = "Release Me";
+      }
+
+      function mUp(obj) {
+        obj.style.backgroundColor = "#D94A38";
+        obj.innerHTML = "Thank You";
+      }
+    </script>
+  </body>
+</html>
