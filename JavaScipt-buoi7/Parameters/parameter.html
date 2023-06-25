@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Setting a default value to a function parameter.</p>
+    <p id="demo"></p>
+
+    <script>
+      function myFunction(x, y) {
+        if (y === undefined) {
+          y = 2;
+        }
+        return x * y;
+      }
+      document.getElementById("demo").innerHTML = myFunction(4);
+
+      //TheRest Parameter
+      function sum(...args) {
+        let sum = 0;
+        for (let arg of args) sum += arg;
+        return sum;
+      }
+
+      let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+
+      document.getElementById("demo").innerHTML = x;
+
+      //The Arguments Object
+      function sumAll() {
+        let sum = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          sum += arguments[i];
+        }
+        return sum;
+      }
+      document.write(sumAll(1, 123, 500, 115, 44, 88));
+
+      //ex2
+
+      function findMax() {
+        let max = -Infinity;
+        for (let i = 0; i < arguments.length; i++) {
+          if (arguments[i] > max) {
+            max = arguments[i];
+          }
+        }
+        return max;
+      }
+      document.write(findMax(4, 5, 6));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript Function Invocation</h1>
+
+    <h2>JavaScript Functions</h2>
+
+    <p>The value of <b>this</b>, in an object method, is the owner object.</p>
+
+    <p id="demo1"></p>
+
+    <script>
+      const myObject = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function () {
+          return this;
+        },
+      };
+      document.getElementById("demo1").innerHTML = myObject.fullName();
+    </script>
+
+    <h2>JavaScript Functions</h2>
+    <p>In this example, myFunction is a function constructor:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction(arg1, arg2) {
+        this.firstName = arg1;
+        this.lastName = arg2;
+      }
+
+      const myObj = new myFunction("John", "Doe");
+      document.getElementById("demo").innerHTML = myObj.firstName;
+    </script>
+  </body>
+</html>

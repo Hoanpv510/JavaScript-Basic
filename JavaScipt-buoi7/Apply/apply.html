@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      The JavaScript apply() Method <br />
+      The apply() method is similar to the call() method (previous chapter).
+      <br />
+
+      In this example the fullName method of person is applied on person1:
+    </p>
+
+    <h2>JavaScript Functions</h2>
+    <p>
+      In this example the fulllName method of person is <b>applied</b> on
+      person1:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+
+      document.getElementById("demo").innerHTML =
+        person.fullName.apply(person1);
+    </script>
+
+    <p>
+      The Difference Between call() and apply()
+      <br />
+      The difference is:
+      <br />
+      The call() method takes arguments separately.
+      <br />
+      The apply() method takes arguments as an array.
+      <br />
+      The apply() method is very handy if you want to use an array instead of an
+      argument list.
+    </p>
+
+    <h2>JavaScript Functions</h2>
+    <p>
+      In this example the fulllName method of person is <b>applied</b> on user1:
+    </p>
+
+    <p id="demo1"></p>
+
+    <script>
+      const user = {
+        fullName: function (city, country) {
+          return (
+            this.firstName + " " + this.lastName + "," + city + "," + country
+          );
+        },
+      };
+
+      const user1 = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+
+      document.getElementById("demo1").innerHTML = user.fullName.apply(user1, [
+        "Oslo",
+        "Norway",
+      ]);
+    </script>
+  </body>
+</html>

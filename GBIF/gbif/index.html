@@ -19,7 +19,7 @@
   </head>
   <body>
     <header class="header" id="home-bg-img">
-    <div class="layout" id="layout"></div>
+      <div id="layout" class="layout"></div>
       <nav class="nav-bar" id="nav-bar">
         <div class="nav-item">
           <a ng-href="/" id="block-logo" class="gbif-logo" href="#">
@@ -42,37 +42,14 @@
           </a>
 
           <ul id="menu" class="menu"></ul>
+          <div id="menu_aaa"></div>
         </div>
-        <!-- <div id="layout" class="layout"></div> -->
+        
         <div class="sticky_group">
-          <a href="#" class="nav-link-icon"><i class="fa-solid fa-heart-pulse"></i></a>
-          <a href="#" class="nav-link-icon"><i class="fa fa-language"></i></a>
-          <a href="#" onclick="show()"  class="nav-link-icon" style="position: relative;"><i class="fa-solid fa-magnifying-glass"></i>
-          </a>
-          <div id="showsearch" class="minisearch show" style="z-index: -1;">
-            <p style="text-align: center;color: aliceblue;">Search</p>
-            <div class="group-search">
-              <input
-                type="search"
-                name="search"
-                class="search"
-                id="search"
-                placeholder="Search"
-                style="padding: 12px;border: none;outline: none;"
-                size="30"
-              />
-              <i
-                class="fa-solid fa-magnifying-glass group-search__icon"
-                style="
-                  font-size: 16px;
-                  padding-right: 20px;
-                  z-index: 1;
-                  color: black;
-                "
-              ></i>
-            </div>
-          </div>
-          <a href="#" class="nav-link-icon"><i class="fa-solid fa-message"></i></a>
+          <a href="#" class=""><i class="fa-solid fa-heart-pulse"></i></a>
+          <a href="#" class=""><i class="fa fa-language"></i></a>
+          <a href="#" class=""><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="#" class=""><i class="fa-solid fa-message"></i></a>
           <input type="button" id="btn-login-nav" class="btn-login-nav" value="Login" />
 
           <div id="login" class="login">
@@ -186,6 +163,8 @@
           </div>
         </div>
       </div>
+
+      
     <!-- </div> -->
     </header>
     <script src="./main.js"></script>
