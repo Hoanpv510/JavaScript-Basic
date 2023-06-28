@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contructors</title>
+  </head>
+  <body>
+    <h2>JavaScript Object Constructors</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      // Constructor function for Person objects
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+
+      // Create a Person object
+      const myFather = new Person("John", "Doe", 50, "blue");
+
+      // Display age
+      document.getElementById("demo").innerHTML =
+        "My father is " + myFather.age + ".";
+    </script>
+    You cannot add a new method to an object constructor the same way you add a
+    new method to an existing object. <br />
+    Adding methods to an object constructor must be done inside the constructor
+    function:
+  </body>
+</html>

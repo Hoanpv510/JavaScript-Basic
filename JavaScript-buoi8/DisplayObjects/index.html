@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+  </head>
+  <body>
+    <h1>How to Display JavaScript Objects?</h1>
+    <ul>
+      <p>Some common solutions to display JavaScript objects are:</p>
+      <li>Displaying the Object Properties by name</li>
+      <li>Displaying the Object Properties in a Loop</li>
+      <li>Displaying the Object using Object.values()</li>
+      <li>Displaying the Object using JSON.stringify()</li>
+    </ul>
+
+    <h2>JavaScript Objects</h2>
+    <p>Object.values() converts an object to an array.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+
+      document.getElementById("demo").innerHTML = Object.values(person);
+      let myString = JSON.stringify(person);
+      //   document.getElementById("demo").innerHTML = myString;
+
+      // let myString = JSON.stringify(person);
+      // document.getElementById("demo").innerHTML = myString;
+    </script>
+  </body>
+</html>

@@ -202,15 +202,15 @@ function fn_loadData() {
           }
         }
       });
-      listMenu[i].addEventListener("mousedown", function () {
-        for (let j = 0; j < listSubMenu.length; j++) {
-          let subMenu = this.querySelector("nav.sub-menu");
-          if (subMenu) {
-            listSubMenu[j].style.display = "none";
-            listMenu[j].style.background = "none";
-          }
-        }
-      });
+      // listMenu[i].addEventListener("mousedown", function () {
+      //   for (let j = 0; j < listSubMenu.length; j++) {
+      //     let subMenu = this.querySelector("nav.sub-menu");
+      //     if (subMenu) {
+      //       listSubMenu[j].style.display = "none";
+      //       listMenu[j].style.background = "none";
+      //     }
+      //   }
+      // });
     }
   }
   document.addEventListener("DOMContentLoaded", clickMenuData);
@@ -280,6 +280,7 @@ function show() {
   for (let j = 0; j < navIconShow.length; j++) {
     if (navIconShow) {
       blockLogin.style.display = "none";
+      blockRegister.style.display = "none";
       navIconShow[j].style.display = "block";
     }
     //   }
@@ -308,6 +309,7 @@ function show() {
 //     document.getElementById("check_list").style.display = "none";
 //   }
 // });
+
 const getdatabutton = document.getElementById("main-menu0");
 const getdatabutton1 = document.getElementById("main-menu1");
 const getdatabutton2 = document.getElementById("main-menu2");
@@ -326,14 +328,14 @@ homebgimg.addEventListener("click", function (e) {
     submenu0.style.display = "none";
     getdatabutton.style.background = "none";
   } else {
-    submenu0.style.display = "block";
+    submenu0.style.display = "flex";
     getdatabutton.style.background = "green";
   }
   if (!getdatabutton1.contains(e.target) && !submenu1.contains(e.target)) {
     submenu1.style.display = "none";
     getdatabutton1.style.background = "none";
   } else {
-    submenu1.style.display = "block";
+    submenu1.style.display = "flex";
     getdatabutton1.style.background = "green";
   }
 
@@ -341,21 +343,21 @@ homebgimg.addEventListener("click", function (e) {
     submenu2.style.display = "none";
     getdatabutton2.style.background = "none";
   } else {
-    submenu2.style.display = "block";
+    submenu2.style.display = "flex";
     getdatabutton2.style.background = "green";
   }
   if (!getdatabutton3.contains(e.target) && !submenu3.contains(e.target)) {
     submenu3.style.display = "none";
     getdatabutton3.style.background = "none";
   } else {
-    submenu3.style.display = "block";
+    submenu3.style.display = "flex";
     getdatabutton3.style.background = "green";
   }
   if (!getdatabutton4.contains(e.target) && !submenu4.contains(e.target)) {
     submenu4.style.display = "none";
     getdatabutton4.style.background = "none";
   } else {
-    submenu3.style.display = "block";
+    submenu4.style.display = "flex";
     getdatabutton4.style.background = "green";
   }
 });
