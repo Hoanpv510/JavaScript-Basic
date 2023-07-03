@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>An array is a special variable, which can hold more than one value</p>
+    <p>
+        Dấu cách và ngắt dòng không quan trọng. Một khai báo có thể trải rộng trên nhiều dòng
+        Bạn cũng có thể tạo một mảng rồi cung cấp các phần tử
+    </p>
+    <script>
+        const cars = [];
+        cars[0]= "Saab";
+        cars[1]= "Volvo";
+        cars[2]= "BMW";
+    </script>
+
+
+    <h1>Truy cập các phần tử mảng</h1>
+    <p>Bạn truy cập một phần tử mảng bằng cách tham khảo số chỉ mục </p>
+    <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        let car = cars[0];
+    </script>
+
+    <h1>Thay đổi một phần tử mảng</h1>
+    <script>
+        cars[0] = "Opel";
+    </script>
+
+
+    <h1>Chuyển đổi một mảng thành một chuỗi</h1>
+    <p>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits.toString();
+
+        Kết quả:
+        Banana,Orange,Apple,Mango
+    </p>
+
+
+    <h1>Array Properties and Methods</h1>
+    <p> các thuộc tính và phương thức mảng được tích hợp sẵn</p>
+
+
+    <h1>The length Property</h1>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let length = fruits.length;
+
+        // Accessing the First Array Element
+        let fruit = fruits[0];
+
+        // Accessing the Last Array Element
+        let fruita = fruits[fruits.length - 1];
+    </script>
+</body>
+</html>

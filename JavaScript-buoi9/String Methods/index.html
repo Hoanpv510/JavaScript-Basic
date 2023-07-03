@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- String length
+    String slice()
+    String substring()
+    String substr()
+    String replace()
+    String replaceAll()
+    String toUpperCase()
+    String toLowerCase()
+    String concat()
+    String trim()
+    String trimStart()
+    String trimEnd()
+    String padStart()
+    String padEnd()
+    String charAt()
+    String charCodeAt()
+    String split() -->
+
+    <h1>JavaScript Strings</h1>
+    <h2>The slice() Method</h2>
+
+    <p>The sliced (extracted) part of the string is:</p>
+    <p id="demo"></p>
+
+    <script>
+      let text = "Apple, Banana, Kiwi";
+      let part = text.slice(7, 13);
+      document.getElementById("demo").innerHTML = part;
+
+      //slice()
+      //   let text = "Apple, Banana, Kiwi";
+      //   let part = text.slice(7);
+      //   document.getElementById("demo").innerHTML = part;
+
+      //subString() and substr() same slice()
+    </script>
+    <h1>JavaScript String Methods</h1>
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo1">Please visit Microsoft!</p>
+
+    <script>
+      function myFunction() {
+        let text = document.getElementById("demo1").innerHTML;
+        document.getElementById("demo1").innerHTML = text.replace(
+          "Microsoft",
+          "W3Schools"
+        );
+        //By default, the replace() method replaces only the first match:
+        //By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work:
+        //To replace case insensitive, use a regular expression with an /i flag (insensitive):let newText = text.replace(/MICROSOFT/i, "W3Schools")
+        //To replace all matches, use a regular expression with a /g flag (global match):let newText = text.replace(/Microsoft/g, "W3Schools");
+      }
+    </script>
+  </body>
+</html>

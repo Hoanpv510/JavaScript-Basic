@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Synonyms:
+
+    Template Literals
+    Template Strings
+    String Templates
+    Back-Tics Syntax -->
+
+    <h2>JavaScript Template Literals</h2>
+
+    <p>Template literals allows variables in strings:</p>
+
+    <p id="demo"></p>
+
+    <p>Template literals are not supported in Internet Explorer.</p>
+
+    <script>
+      let header = "Templates Literals";
+      let tags = ["template literals", "javascript", "es6"];
+
+      let html = `<h2>${header}</h2><ul>`;
+
+      for (const x of tags) {
+        html += `<li>${x}</li>`;
+      }
+
+      html += `</ul>`;
+      document.getElementById("demo").innerHTML = html;
+    </script>
+  </body>
+</html>
