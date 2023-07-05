@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Các mô-đun JavaScript cho phép bạn chia mã của mình thành các tệp riêng
+      biệt. Điều này giúp duy trì cơ sở mã dễ dàng hơn. Các mô-đun được nhập từ
+      các tệp bên ngoài với importcâu lệnh
+    </p>
+    <p id="demo"></p>
+    <script type="module">
+      import message from "./message.js";
+      document.getElementById("demo").innerHTML = message();
+    </script>
+
+    <h1>There are two types of exports: Named Exports and Default Exports.</h1>
+
+    <h2>Named Exports</h2>
+    <p>
+      Có 1 file là peson.js. Có 2 cách export: In-line individually và all at
+      once at the bottom
+    </p>
+    <script>
+      // In-line individually:
+      export const name = "Jesse";
+      export const age = 40;
+
+      // All at once at the bottom:
+      const name = "Jesse";
+      const age = 40;
+      export { name, age };
+    </script>
+
+    <h2>Default Exports</h2>
+    <p>chỉ có thể có một lần xuất mặc định trong một tệp.</p>
+    <script>
+      const messag = () => {
+        const name = "Jesse";
+        const age = 40;
+        return name + " is " + age + "years old.";
+      };
+
+      export default messag;
+    </script>
+
+    <h2>Import</h2>
+    <p>Có 2 cách import</p>
+    <script>
+      // Import from named exports:
+      import { name, age } from "./person.js";
+
+      // Import from default exports:
+      import message from "./message.js";
+    </script>
+  </body>
+</html>
