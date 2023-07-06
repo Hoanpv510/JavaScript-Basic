@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Asynchronous JavaScript</h1>
+    <h1>JavaScript Functions</h1>
+    <h2>setTimeout() with a Callback</h2>
+
+    <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+    <h1 id="demo"></h1>
+
+    <script>
+      setTimeout(myFunction, 3000);
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "I love You !!";
+      }
+    </script>
+
+    <p>
+      In the example above, myFunction is used as a callback. myFunction is
+      passed to setTimeout() as an argument. 3000 is the number of milliseconds
+      before time-out, so myFunction() will be called after 3 seconds.
+    </p>
+
+    <p>
+      Instead of passing the name of a function as an argument to another
+      function, you can always pass a whole function instead:
+    </p>
+    <h1 id="demo1"></h1>
+
+    <script>
+      setTimeout(function () {
+        myFunction1("I love You !!!");
+      }, 3000);
+
+      function myFunction1(value) {
+        document.getElementById("demo1").innerHTML = value;
+      }
+    </script>
+
+    <h2>setInterval() with a Callback</h2>
+
+    <p>
+      Using setInterval() to display the time every second (1000 milliseconds).
+    </p>
+
+    <h1 id="dem2o"></h1>
+
+    <script>
+      setInterval(myFunction2, 1000);
+
+      function myFunction2() {
+        let d = new Date();
+        document.getElementById("dem2o").innerHTML =
+          d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+      }
+    </script>
+  </body>
+</html>

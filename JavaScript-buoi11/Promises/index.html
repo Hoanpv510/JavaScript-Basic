@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript Promises</h1>
+    <!-- example -->
+    <p id="demo"></p>
+
+    <script>
+      function myDisplayer(some) {
+        document.getElementById("demo").innerHTML = some;
+      }
+
+      let myPromise = new Promise(function (myResolve, myReject) {
+        let x = 0;
+
+        // some code (try to change x to 5)
+
+        if (x == 0) {
+          myResolve("OK");
+        } else {
+          myReject("Error");
+        }
+      });
+
+      myPromise.then(
+        function (value) {
+          myDisplayer(value);
+        },
+        function (error) {
+          myDisplayer(error);
+        }
+      );
+    </script>
+
+    <h2>Waiting for a Timeout</h2>
+    <h2>setInterval() with a Callback</h2>
+
+    <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+    <h1 id="demo1"></h1>
+
+    <script>
+      setTimeout(function () {
+        myFunction1("I love You !!!");
+      }, 3000);
+
+      function myFunction1(value) {
+        document.getElementById("demo1").innerHTML = value;
+      }
+    </script>
+    <!-- Promise -->
+    <!-- <script>
+      const myPromise = new Promise(function (myResolve, myReject) {
+        setTimeout(function () {
+          myResolve("I love You !!");
+        }, 3000);
+      });
+
+      myPromise.then(function (value) {
+        document.getElementById("demo").innerHTML = value;
+      });
+    </script> -->
+
+    <h2>Waiting for a file</h2>
+    <p id="demo1"></p>
+
+    <script>
+      function myDisplayer2(some1) {
+        document.getElementById("demo1").innerHTML = some1;
+      }
+
+      function getFile(myCallback) {
+        let req = new XMLHttpRequest();
+        req.onload = function () {
+          if (req.status == 200) {
+            myCallback2(this.responseText);
+          } else {
+            myCallback2("Error: " + req.status);
+          }
+        };
+        req.open("GET", "mycar.html");
+        req.send();
+      }
+
+      getFile(myDisplayer2);
+    </script>
+
+    <!-- Promises -->
+    <!-- <script>
+      function myDisplayer(some) {
+        document.getElementById("demo").innerHTML = some;
+      }
+
+      let myPromise = new Promise(function (myResolve, myReject) {
+        let req = new XMLHttpRequest();
+        req.open("GET", "mycar.html");
+        req.onload = function () {
+          if (req.status == 200) {
+            myResolve(req.response);
+          } else {
+            myReject("File not Found");
+          }
+        };
+        req.send();
+      });
+
+      myPromise.then(
+        function (value) {
+          myDisplayer(value);
+        },
+        function (error) {
+          myDisplayer(error);
+        }
+      );
+    </script> -->
+  </body>
+</html>
