@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Web APIs - Introduction</h1>
+    <ul>
+      <h3>A Web API is a developer's dream.</h3>
+      <li>API stands for Application Programming Interface.</li>
+      <li>It can extend the functionality of the browser</li>
+      <li>It can greatly simplify complex functions</li>
+      <li>It can provide easy syntax to complex code</li>
+    </ul>
+
+    <!-- Example -->
+    <h2>JavaScript Geolocation</h2>
+
+    <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+      const x = document.getElementById("demo");
+
+      function getLocation() {
+        try {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } catch {
+          x.innerHTML = err;
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+    </script>
+
+    <h2>Third Party APIs</h2>
+    <h3>Third party APIs are not built into your browser.</h3>
+
+    <p>To use these APIs, you will have to download the code from the Web.</p>
+
+    Examples:
+    <ul>
+      <li>YouTube API - Allows you to display videos on a web site.</li>
+      <li>Twitter API - Allows you to display Tweets on a web site.</li>
+      <li>Facebook API - Allows you to display Facebook info on a web site.</li>
+    </ul>
+  </body>
+</html>
