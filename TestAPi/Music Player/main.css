@@ -1,0 +1,59 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+
+.mar {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid pink;
+    background: url(./img/gai-bar-dep-ngau.jpg);
+    background-size: cover;
+}
+
+.player {
+    width: 100%;
+    height: auto;
+    position: sticky;
+}
+
+.progress {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.cd-thumb {
+    width: 200px;
+    height: 200px;
+    background: url(./img/978d12830c18df95c26e93e658019166.webp);
+    background-size: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+h4 {
+    color: red,
+
+}
+
+.song {
+    display: flex;
+    justify-content: space-around;
+}
+
+.thumb {
+    width: 50px;
+    height: 50px;
+    align-items: start;
+}
+
+.playlist {
+    margin-top: 50px;
+}

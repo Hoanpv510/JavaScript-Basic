@@ -15,13 +15,6 @@ async function makeNetworkRequest() {
   return data;
 }
 
-// async function readFile() {
-//   const file = await fs.readFile(
-//     "https://raw.githubusercontent.com/openai/gym/master/README.md"
-//   );
-//   const contents = await file.toString();
-//   return contents;
-// }
 
 async function readFile() {
   const response = await fetch(
@@ -34,14 +27,6 @@ async function readFile() {
   const data = await response.text();
   return data;
 }
-// const Api =  "https://raw.githubusercontent.com/openai/gym/master/README.md";
-// function readFile(callback) {
-//     fetch(Api)
-//       .then(function (response) {
-//         return response.text();
-//       })
-//       .then(callback);
-//   }
 
 const doSomethingElse = async () => {
   // Make a HTTP request to the GitHub API.
